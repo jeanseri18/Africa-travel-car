@@ -91,74 +91,83 @@
         </nav>
         <!--end::Header-->
         <!--begin::Sidebar-->
-        <aside class="app-sidebar  " data-bs-theme="dark" style="background-color:#1088F2;color:white">
-        <div class="bg-white">
-            <center> <img src="logo.png" alt="AdminLTE Logo" width="150px"
-            class="brand-image opacity-75 "></center></div>
-            <div class="sidebar-wrapper">
-              
+        <aside class="app-sidebar" data-bs-theme="dark" style="background-color:#012545FF;color:white">
+    <div  style="background-color:#012545FF">
+        <center>
+            <img src="logo.png" alt="AdminLTE Logo" width="150px" class="brand-image opacity-75">
+        </center>
+    </div>
+    <div class="sidebar-wrapper">
+        <nav class="mt-2">
+            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+            
+                <!-- Tableau de bord -->
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-house-door-fill text-white"></i>
+                        <p>Tableau de board</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('societes.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-house-door-fill text-white"></i>
+                        <p>Societé de transport</p>
+                    </a>
+                </li>
+                <!-- Gares -->
+                <li class="nav-item">
+                    <a href="{{ route('societes.garesAll') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-geo-alt-fill text-white"></i>
+                        <p>Gare</p>
+                    </a>
+                </li>
+                <!-- Lieux -->
+                <li class="nav-item">
+                    <a href="{{ route('lieux.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-geo-fill text-white"></i>
+                        <p>Lieux</p>
+                    </a>
+                </li>
+                <!-- Destination local -->
+                <li class="nav-item">
+                    <a href="{{ route('destinations_national.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-map text-white"></i>
+                        <p>Destination local</p>
+                    </a>
+                </li>
+                <!-- Destination Sous région -->
+                <li class="nav-item">
+                    <a href="{{ route('destinations_sousregion.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-globe text-white"></i>
+                        <p>Destination Sous région</p>
+                    </a>
+                </li>
+                <!-- Réservations -->
+                <li class="nav-item">
+                    <a href="{{ route('reservations.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-calendar-check text-white"></i>
+                        <p>Reservations</p>
+                    </a>
+                </li>
+                <!-- Paiements -->
+                <li class="nav-item">
+                    <a href="{{ route('paiements.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-credit-card-fill text-white"></i>
+                        <p>Paiements</p>
+                    </a>
+                </li>
+                <!-- Utilisateurs -->
+                <li class="nav-item">
+                    <a href="{{ route('users.index') }}" class="nav-link" style="color:white">
+                        <i class="nav-icon bi bi-person-circle text-white"></i>
+                        <p>Utilisateurs</p>
+                    </a>
+                </li>
 
-                <nav class="mt-2">
-                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
-                        data-accordion="false">
-                      
-                        <!-- Tableau de bord -->
-                        <li class="nav-item">
-                            <a href="{{ route('societes.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Societé de transport</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('societes.garesAll') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Gare</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('lieux.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Lieux</p>
-                            </a>
-                        </li>   <li class="nav-item">
-                            <a href="{{ route('destinations_national.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Destination local</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('destinations_sousregion.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Destination Sous region</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('reservations.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Reservations</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('paiements.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Paiements</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('users.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-speedometer2 text-white"></i>
-                                <p>Utilisateur</p>
-                            </a>
-                        </li>
-                                  
-                                            </ul>
-                </nav>
-
-            </div>
-            <!--end::Sidebar Wrapper-->
-        </aside>
-        <!--end::Sidebar-->
-        <!--begin::App Main-->
+            </ul>
+        </nav>
+    </div>
+</aside>
 
         <main class="app-main" style="background-color:white">
             <div class="app-content-header">

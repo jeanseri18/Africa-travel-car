@@ -23,6 +23,10 @@ use App\Http\Controllers\DestinationNationaleController;
 use App\Http\Controllers\DestinationSousRegionController;
 use App\Http\Controllers\LieuController;
 use App\Http\Controllers\UserController;
+// routes/web.php
+use App\Http\Controllers\DashboardController;
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 Route::get('/users', [UserController::class, 'index'])->name('users.index'); // Liste des utilisateurs
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create'); // Formulaire création
