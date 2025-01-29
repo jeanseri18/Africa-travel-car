@@ -18,10 +18,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'type', 'nom', 'prenom', 'email', 'contact_telephone', 'whatsapp', 'password', 'adresse', 'role'
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -42,4 +41,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function gares()
+{
+    return $this->belongsToMany(Gare::class, 'sous_traitant_gares');
+}
+
 }
