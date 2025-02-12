@@ -52,36 +52,37 @@
                     <!--end::Fullscreen Toggle-->
                     <!--begin::User Menu Dropdown-->
                     <li class="nav-item dropdown user-menu">
-    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-        <!-- Utilisation de l'icône Font Awesome pour l'utilisateur -->
-        <i class="bi bi-person-circle text-black" style="font-size: 1.5rem;color:black"></i>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-        <!--begin::User Header-->
-        <li class="user-header bg-secondary">
-            <!-- Utilisation de l'icône Font Awesome pour l'utilisateur -->
-            <i class="bi bi-person-circle " style="font-size: 3rem;color:white"></i>
-            <p>
-                {{ auth()->user()->nom }}
-              
-                <small>  {{ auth()->user()->role }}</small>
-            </p>
-        </li>
-        <!--end::User Header-->
-        <!--begin::Menu Footer-->
-        <li class="user-footer">
-            <a href="#" class="btn btn-default btn-flat">Profile</a>
-            <form id="logout-form" action="" method="POST" style="display: none;">
-    @csrf
-</form>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <!-- Utilisation de l'icône Font Awesome pour l'utilisateur -->
+                            <i class="bi bi-person-circle text-black" style="font-size: 1.5rem;color:black"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                            <!--begin::User Header-->
+                            <li class="user-header bg-secondary">
+                                <!-- Utilisation de l'icône Font Awesome pour l'utilisateur -->
+                                <i class="bi bi-person-circle " style="font-size: 3rem;color:white"></i>
+                                <p>
+                                    {{ auth()->user()->nom }}
 
-<a href="#" class="btn btn-default btn-flat float-end" 
-   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-    Déconnexion
-</a>        </li>
-        <!--end::Menu Footer-->
-    </ul>
-</li>
+                                    <small> {{ auth()->user()->role }}</small>
+                                </p>
+                            </li>
+                            <!--end::User Header-->
+                            <!--begin::Menu Footer-->
+                            <li class="user-footer">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <form id="logout-form" action="" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+
+                                <a href="#" class="btn btn-default btn-flat float-end"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Déconnexion
+                                </a>
+                            </li>
+                            <!--end::Menu Footer-->
+                        </ul>
+                    </li>
 
                     <!--end::User Menu Dropdown-->
                 </ul>
@@ -92,82 +93,83 @@
         <!--end::Header-->
         <!--begin::Sidebar-->
         <aside class="app-sidebar" data-bs-theme="dark" style="background-color:#012545FF;color:white">
-    <div  style="background-color:#012545FF">
-        <center>
-            <img src="logo.png" alt="AdminLTE Logo" width="150px" class="brand-image opacity-75">
-        </center>
-    </div>
-    <div class="sidebar-wrapper">
-        <nav class="mt-2">
-            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-            
-                <!-- Tableau de bord -->
-                <li class="nav-item">
-                    <a href="{{ route('dashboard.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-house-door-fill text-white"></i>
-                        <p>Tableau de board</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('societes.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-house-door-fill text-white"></i>
-                        <p>Societé de transport</p>
-                    </a>
-                </li>
-                <!-- Gares -->
-                <li class="nav-item">
-                    <a href="{{ route('societes.garesAll') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-geo-alt-fill text-white"></i>
-                        <p>Gare</p>
-                    </a>
-                </li>
-                <!-- Lieux -->
-                <li class="nav-item">
-                    <a href="{{ route('lieux.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-geo-fill text-white"></i>
-                        <p>Lieux</p>
-                    </a>
-                </li>
-                <!-- Destination local -->
-                <li class="nav-item">
-                    <a href="{{ route('destinations_national.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-map text-white"></i>
-                        <p>Destination local</p>
-                    </a>
-                </li>
-                <!-- Destination Sous région -->
-                <li class="nav-item">
-                    <a href="{{ route('destinations_sousregion.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-globe text-white"></i>
-                        <p>Destination Sous région</p>
-                    </a>
-                </li>
-                <!-- Réservations -->
-                <li class="nav-item">
-                    <a href="{{ route('reservations.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-calendar-check text-white"></i>
-                        <p>Reservations</p>
-                    </a>
-                </li>
-                <!-- Paiements -->
-                <li class="nav-item">
-                    <a href="{{ route('paiements.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-credit-card-fill text-white"></i>
-                        <p>Paiements</p>
-                    </a>
-                </li>
-                <!-- Utilisateurs -->
-                <li class="nav-item">
-                    <a href="{{ route('users.index') }}" class="nav-link" style="color:white">
-                        <i class="nav-icon bi bi-person-circle text-white"></i>
-                        <p>Utilisateurs</p>
-                    </a>
-                </li>
+            <div style="background-color:#012545FF">
+                <center>
+                    <img src=" {{ asset('logo.png')}}" alt="AdminLTE Logo" width="150px" class="brand-image opacity-75">
+                </center>
+            </div>
+            <div class="sidebar-wrapper">
+                <nav class="mt-2">
+                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
+                        data-accordion="false">
 
-            </ul>
-        </nav>
-    </div>
-</aside>
+                        <!-- Tableau de bord -->
+                        <li class="nav-item">
+                            <a href="{{ route('dashboard.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-house-door-fill text-white"></i>
+                                <p>Tableau de board</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('societes.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-house-door-fill text-white"></i>
+                                <p>Societé de transport</p>
+                            </a>
+                        </li>
+                        <!-- Gares -->
+                        <li class="nav-item">
+                            <a href="{{ route('societes.garesAll') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-geo-alt-fill text-white"></i>
+                                <p>Gare</p>
+                            </a>
+                        </li>
+                        <!-- Lieux -->
+                        <li class="nav-item">
+                            <a href="{{ route('lieux.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-geo-fill text-white"></i>
+                                <p>Lieux</p>
+                            </a>
+                        </li>
+                        <!-- Destination local -->
+                        <li class="nav-item">
+                            <a href="{{ route('destinations_national.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-map text-white"></i>
+                                <p>Destination local</p>
+                            </a>
+                        </li>
+                        <!-- Destination Sous région -->
+                        <li class="nav-item">
+                            <a href="{{ route('destinations_sousregion.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-globe text-white"></i>
+                                <p>Destination Sous région</p>
+                            </a>
+                        </li>
+                        <!-- Réservations -->
+                        <li class="nav-item">
+                            <a href="{{ route('reservations.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-calendar-check text-white"></i>
+                                <p>Reservations</p>
+                            </a>
+                        </li>
+                        <!-- Paiements -->
+                        <li class="nav-item">
+                            <a href="{{ route('paiements.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-credit-card-fill text-white"></i>
+                                <p>Paiements</p>
+                            </a>
+                        </li>
+                        <!-- Utilisateurs -->
+                        <li class="nav-item">
+                            <a href="{{ route('users.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-person-circle text-white"></i>
+                                <p>Utilisateurs</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
 
         <main class="app-main" style="background-color:white">
             <div class="app-content-header">
@@ -188,7 +190,7 @@
                     </div>
                 </div> end::Row-->
             </div>
-            <div class="app-content" >
+            <div class="app-content">
                 <!--begin::Container-->
                 <div class="container-fluid">
                     <!--begin::Row-->

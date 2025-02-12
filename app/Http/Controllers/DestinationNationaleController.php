@@ -35,6 +35,7 @@ class DestinationNationaleController extends Controller
     {
         // Validation des données
         $validated = $request->validate([
+            'type' => 'required|exists:societes_transport,id',
             'societe_id' => 'required|exists:societes_transport,id',
             'gare_depart' => 'required|string|max:255',
             'depart' => 'required|string|max:255',
@@ -71,6 +72,7 @@ class DestinationNationaleController extends Controller
 
         // Validation des données
         $validated = $request->validate([
+            'type' => 'required|exists:societes_transport,id',
             'societe_id' => 'required|exists:societes_transport,id',
             'gare_depart' => 'required|string|max:255',
             'depart' => 'required|string|max:255',

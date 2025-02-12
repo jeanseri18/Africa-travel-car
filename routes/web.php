@@ -119,10 +119,5 @@ Route::prefix('admin')->group(function () {
     // Déconnexion
     Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-    // Dashboard protégé par auth
-    Route::middleware('auth')->group(function () {
-        Route::get('dashboard', function () {
-            return view('admin.dashboard');
-        })->name('admin.dashboard');
-    });
+
 });

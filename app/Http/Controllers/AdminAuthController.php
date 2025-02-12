@@ -27,7 +27,7 @@ class AdminAuthController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             $user = Auth::user();
             if ($user->type === 'Administrateur') {
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('dashboard.index');
             } else {
                 Auth::logout();
                 return redirect()->route('admin.login')->withErrors(['error' => 'Vous n\'êtes pas un administrateur.']);
