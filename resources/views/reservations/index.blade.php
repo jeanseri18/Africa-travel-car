@@ -16,6 +16,8 @@
                     <th>Destination</th>
                     <th>Date Départ</th>
                     <th>Heure Départ</th>
+                    <th>Assurance</th>
+
                     <th>Tarif Unitaire</th>
                     <th>Total Payé</th>
                     <th>Statut</th>
@@ -33,6 +35,7 @@
                         <td>{{ $reservation->destination }}</td>
                         <td>{{ $reservation->date_depart }}</td>
                         <td>{{ $reservation->heure_depart }}</td>
+                        <td>{{ $reservation->assurance }}</td>
                         <td>{{ $reservation->tarif_unitaire }}€</td>
                         <td>{{ $reservation->total_paye }}€</td>
                         <td>{{ $reservation->statut }}</td>
