@@ -36,8 +36,8 @@
                         <td>{{ $reservation->date_depart }}</td>
                         <td>{{ $reservation->heure_depart }}</td>
                         <td>{{ $reservation->assurance }}</td>
-                        <td>{{ $reservation->tarif_unitaire }}€</td>
-                        <td>{{ $reservation->total_paye }}€</td>
+                        <td>{{ $reservation->tarif_unitaire }}CFA</td>
+                        <td>{{ $reservation->total_paye }}CFA</td>
                         <td>{{ $reservation->statut }}</td>
                         <td>
                             <!-- Ajoutez des boutons pour les actions -->
